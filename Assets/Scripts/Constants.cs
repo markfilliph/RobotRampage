@@ -27,16 +27,7 @@ public class Constants : MonoBehaviour
         public const string Game = "Game";
         public const float CameraDefaultZoom = 60f;
 
-void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public static readonly int[] AllPickupTypes = new int[5]
     {
