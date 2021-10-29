@@ -24,5 +24,14 @@ public class Missile : MonoBehaviour
         Destroy(gameObject);
     }
     // Start is called before the first frame update
-    
+
+    void OnCollisionEnter(Collision collider)
+    {
+        if (collider.gameObject.GetComponent<Player>() != null
+            && collider.gameObject.tag == "Player")
+        {
+            collider.gameObject.GetComponent<Player>().TakeDamage(damage);
+        }
+        Destroy(gameObject);
+    }
 }
