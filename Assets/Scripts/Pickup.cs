@@ -12,6 +12,7 @@ public class Pickup : MonoBehaviour
         {
             collider.gameObject.GetComponent<Player>().PickUpItem(type);
             Destroy(gameObject);
+            GetComponentInParent<PickupSpawn>().PickupWasPickedUp();
         }
     }
     // Start is called before the first frame update
