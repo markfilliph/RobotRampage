@@ -14,6 +14,9 @@ public class GunEquipper : MonoBehaviour
     [SerializeField]
     GameUI gameUI;
 
+    [SerializeField]
+    Ammo ammo;
+
     void Start()
     {
         activeWeaponType = Constants.Pistol;
@@ -28,6 +31,7 @@ public class GunEquipper : MonoBehaviour
         shotgun.SetActive(false);
         weapon.SetActive(true);
         activeGun = weapon;
+        gameUI.SetAmmoText(ammo.GetAmmo(activeGun.tag));
     }
 
     // Update is called once per frame

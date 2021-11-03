@@ -9,6 +9,12 @@ public class Game : MonoBehaviour
     [SerializeField]
     RobotSpawn[] spawns;
     public int enemiesLeft;
+
+    public GameUI gameUI;
+    public GameObject player;
+    public int score;
+    public int waveCountdown;
+    public bool isGameOver;
     // 1
     void Start()
     {
